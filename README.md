@@ -1,5 +1,7 @@
 # Level Up
 
+![Level Up recursive self-improvement workflow](assets/level-up.png)
+
 An evidence-driven agent skill for recursively refining ideas and evaluating
 codebases.
 
