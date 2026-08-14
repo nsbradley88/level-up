@@ -5,18 +5,25 @@
 An evidence-driven agent skill for recursively refining ideas and evaluating
 codebases.
 
-Level Up coordinates multiple subagents through independent discovery,
-validation, refinement, and adversarial review. It continues until the
-operator's objectives are satisfied, no unresolved material findings remain, or
-further review stops producing meaningful progress.
+Level Up coordinates discovery, independent validation where the host permits,
+refinement, and adversarial review. It reaches full convergence only when the
+operator's objectives are satisfied and no material finding prevents their
+objective-scoped convergence. Otherwise it may stop with bounded convergence
+when further responsible review is unavailable or no longer reduces material
+uncertainty.
+
+`SKILL.md` is the normative specification. This README is a descriptive guide
+and defers to it.
 
 The skill is deliberately portable and non-intrusive:
 
 - one self-contained `SKILL.md`;
 - no runtime dependencies, services, or infrastructure;
 - no implementation or experimentation phase;
-- no modifications to the idea or codebase being evaluated; and
-- no persistent artifacts unless the operator chooses to save them.
+- no subject writes during Phases 1–6; and
+- no subject-internal output except an explicitly approved, safe Phase 7 export.
+  Filesystem-backed run artifacts are ephemeral by default, but may be retained
+  and disclosed when safe cleanup cannot be established.
 
 ## Why Level Up?
 
@@ -25,9 +32,10 @@ more agents helps, but agreement alone is not reliable when every agent sees the
 same assumptions and reasoning.
 
 Level Up separates discovery from validation and refinement from adversarial
-review. Fresh agents independently audit consequential claims instead of simply
-endorsing earlier conclusions. Evidence outranks consensus, disagreements remain
-visible, and each iteration builds on an immutable record.
+review. Separate agents re-derive consequential claims from primary evidence
+where the host supports them instead of simply endorsing earlier conclusions.
+Evidence outranks consensus, disagreements remain visible, and each iteration
+builds on a write-once record when artifact storage is available.
 
 The result is a reusable review discipline for questions such as:
 
@@ -51,14 +59,17 @@ flowchart TD
     C -- No --> P1
     C -- Yes or bounded --> P7[7. Final synthesis]
     P7 --> S{Save complete output?}
-    S -- Yes --> E[Export immutable artifacts]
-    S -- No --> D[Discard ephemeral artifacts]
+    S -- Yes --> E[Export completed artifacts]
+    S -- No --> D[Discard ephemeral artifacts when safe]
 ```
+
+The save and export branch applies only when filesystem-backed artifacts exist.
+In-conversation runs deliver the same content without a filesystem save prompt.
 
 ### Phase 1: Research and discovery
 
-Independent research agents investigate the subject from complementary
-perspectives.
+Fresh research agents, when available, investigate the subject from
+complementary perspectives.
 
 For an idea, they examine the problem, intended value, users, constraints, prior
 art, alternatives, feasibility, risks, and unsupported assumptions. For a
@@ -66,36 +77,47 @@ codebase, they inventory the supplied folder recursively and inspect relevant
 source, tests, configuration, documentation, and architecture across its
 subfolders.
 
+Before dispatch, the main agent manifests the in-scope paths, declares
+exclusions by named rule, and partitions the work by bytes so every path is
+assigned to exactly one agent. Each agent reports every assigned path as fully
+read, partially read with the unread ranges named, or excluded by rule, and
+`phase1.md` carries that coverage ledger.
+
 ### Phase 2: Research validation
 
-Fresh agents apply **trust but verify**. They reconstruct consequential claims
-from primary evidence and classify them as supported, partially supported,
-contradicted, or unverifiable.
+Independent validators—or the strongest disclosed fallback—apply **trust but
+verify**. They reconstruct consequential claims from primary evidence and
+classify them as supported, partially supported, contradicted, or unverifiable.
+Disagreements are settled by direct inspection of primary evidence rather than
+by majority.
 
 Only supported or explicitly qualified research proceeds.
 
 ### Phase 3: Refinement and scope
 
-Scoping agents use the validated research to refine the idea or identify
-evidence-backed codebase improvements. Recommendations describe outcomes,
-rationale, benefits, tradeoffs, dependencies, risks, and future success
-criteria—not implementation.
+Fresh scoping agents, separate from prior-phase authors where the host permits,
+use the validated research to refine the idea or identify evidence-backed
+codebase improvements. Recommendations describe outcomes, rationale, benefits,
+tradeoffs, dependencies, risks, and future success criteria—not implementation.
 
 ### Phase 4: Scope validation
 
-Independent validators challenge whether each recommendation follows from the
-evidence, addresses a real need, fits known constraints, and accounts for
-material alternatives.
+Independent validators—or the strongest disclosed fallback—challenge whether
+each recommendation follows from the evidence, addresses a real need, fits known
+constraints, and accounts for material alternatives.
+
+They also validate the proposed mechanism against the target's actual runtime
+or interface contract, not only the problem it claims to address.
 
 This phase filters speculative benefits, hidden dependencies, duplicated
 recommendations, scope inflation, and circular success criteria.
 
 ### Phase 5: Adversarial review
 
-Fresh reviewers assume the validated scope contains meaningful mistakes and
-actively seek evidence for them. They challenge assumptions, feasibility,
-tradeoffs, edge cases, incentives, and the claim that the proposal improves the
-current state.
+Separate reviewers—or the strongest disclosed fallback—receive a neutral extract
+of the validated scope, assume it contains meaningful mistakes, and actively
+seek evidence for them. They challenge assumptions, feasibility, tradeoffs, edge
+cases, incentives, and the claim that the proposal improves the current state.
 
 The goal is not to maximize finding count. Reviewers must distinguish material
 problems from hypothetical objections, stylistic preferences, and minor
@@ -103,27 +125,50 @@ observations.
 
 ### Phase 6: Adversarial validation
 
-Fresh validators independently adjudicate every material adversarial finding.
-The main agent then determines whether the review has converged.
+Independent validators—or the strongest disclosed fallback—re-derive evidence
+status, materiality, classification, distinctness, and objective effects from
+every Phase 5 ledger row without seeing sealed determinations. Those
+determinations are then revealed and reconciled.
+
+The main agent drafts the convergence decision, and one separate checker reviews
+it against the frozen candidate record and convergence conditions without
+reopening subject research. The validation results, final decision, and
+conformance record are written together into `phase6.md`.
 
 Quorum is evidence-based rather than a simple agent vote. Convergence requires:
 
 - the inherited objectives to be satisfied as far as available evidence can
-  demonstrate;
-- no confirmed, unresolved material findings; and
+  demonstrate under their recorded types;
+- no material finding to remain open against an objective or non-waivable
+  constraint—partially confirmed, unverifiable, and accepted-risk findings
+  preclude full convergence; and
 - consequential conclusions to be traceable to validated evidence.
 
-If convergence is not reached, a new immutable iteration begins at Phase 1,
-focused on the weaknesses exposed by the prior iteration.
+An indeterminate check, or a second non-conformant result after the permitted
+correction, prevents full convergence for that iteration. The check is bounded
+and cannot create new subject findings or recursively check itself.
+
+Objectives are classified as review-output, decision, or desired-subject-state
+objectives. A confirmed and fully specified subject defect remains open and
+blocks an affected desired-subject-state objective, but does not by itself
+prevent convergence of a review-output or decision objective or imply that the
+subject was fixed.
+
+If convergence is not reached, a new iteration begins automatically at Phase 1,
+focused on the weaknesses exposed by the prior iteration and using a newly named
+partition axis. Level Up does not pause between iterations to ask whether to
+continue.
 
 ### Phase 7: Final synthesis
 
 The main agent produces a standalone final report containing:
 
 - a high-level executive summary;
+- the subject identity and revision the findings describe;
 - review boundaries and inherited objectives;
 - validated findings and recommendations;
 - important evidence and dissent;
+- a coverage summary and the per-iteration saturation series;
 - unresolved limitations and uncertainty;
 - an account of how the result evolved; and
 - an outcome appropriate to the evaluated subject.
@@ -134,7 +179,8 @@ decision-ready proposal.
 For a **codebase**, the outcome is a PR-ready change specification and evidence
 package—not implemented code or a claim that a pull request already exists.
 
-The operator is then asked whether the complete output should be saved.
+In filesystem artifact mode, the operator is then asked whether the complete
+output should be saved.
 
 ## Installation
 
@@ -143,6 +189,8 @@ Level Up uses the portable
 for reuse across codebases or locally for a single project.
 
 ### GitHub Copilot CLI
+
+#### POSIX shell (bash or zsh)
 
 Install globally:
 
@@ -171,7 +219,36 @@ curl -fsSL \
   -o .github/skills/level-up/SKILL.md
 ```
 
-Use `/skills` in GitHub Copilot CLI to inspect and manage available skills.
+#### PowerShell 5.1+ or PowerShell 7+
+
+Choose one destination by uncommenting the corresponding `$dir` assignment:
+
+```powershell
+$dir = "$HOME\.copilot\skills\level-up"    # GitHub Copilot CLI global
+# $dir = "$HOME\.agents\skills\level-up"   # Cross-agent skills directory
+# $dir = ".github\skills\level-up"         # Repository-local
+
+New-Item -ItemType Directory -Force -Path $dir | Out-Null
+Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/nsbradley88/level-up/main/SKILL.md -OutFile "$dir\SKILL.md"
+```
+
+These commands install the latest version from mutable `main`. An immutable
+release reference has not yet been published.
+
+If installing or changing the skill during a running Copilot CLI session, use
+`/skills reload` or start a new session. Then use `/skills info level-up` to
+inspect the loaded skill and its location; `/skills list` lists available
+skills. From a terminal, `copilot skill list` provides the corresponding list.
+See [Adding agent skills for GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills).
+
+Keep four checks distinct:
+
+1. **Loading:** reload or restart, then inspect `level-up`.
+2. **Format:** confirm `SKILL.md` and required frontmatter fields.
+3. **Integrity and parity:** compare the installed file with the intended source
+   and verify public installation content separately.
+4. **Behavior:** run Level Up and confirm it produces a structurally complete
+   `phase1.md`; loading or format checks alone do not validate behavior.
 
 ### Other compatible agents
 
@@ -216,8 +293,8 @@ objective are already clear, orchestration begins immediately.
 ## Artifacts
 
 Phase outputs are aggregates written by the main agent, not concatenated
-subagent transcripts. They live in host-provided session or temporary storage
-during execution:
+subagent transcripts. When the host provides writable session or temporary
+storage, they live there during execution:
 
 ```text
 level-up-<run-id>/
@@ -234,17 +311,37 @@ level-up-<run-id>/
   final.md
 ```
 
-Each iteration is immutable. Later phases consume the prior aggregate and its
-underlying evidence while avoiding unnecessary transcript growth.
+Each filesystem-backed iteration is write-once by run policy. Later phases
+consume the prior aggregate and its underlying evidence while avoiding
+unnecessary transcript growth.
 
-After Phase 7, the operator can export the entire directory. If the operator
-declines, nothing is written to the evaluated environment and the ephemeral
-artifacts are discarded when safe.
+Before a phase can advance, its filesystem aggregate must end with the Level Up
+completeness marker and pass a structural read-back check. The same rule applies
+to `final.md` before export. An incomplete file is not a completed artifact and
+cannot be exported.
+
+Without writable storage, the same phase aggregates and final synthesis are
+delivered as labeled conversation sections. Before evidence in any mode, Level
+Up discloses that it cannot control or verify transcript retention, access,
+export, or deletion.
+
+In filesystem mode, Level Up directly discloses the run directory and states
+that durability, access control, and write protection are host-provided and
+unverified. Separately from path checks, the operator attests that the export
+destination is suitable after considering synced, shared, network, removable,
+or broadly readable storage the run cannot reliably detect. Export verifies
+copied content before cleanup; an
+early-stop package is marked incomplete and not converged. Failures retain and
+disclose the run directory and any partial destination; cleanup fails closed.
 
 ## Convergence and bounded review
 
 Level Up does not attempt to reach a meaningless state of “zero findings.”
-Review ends when objectives are met and no confirmed material findings remain.
+Full convergence is evaluated against each inherited objective and its type. A
+confirmed, validated, and fully specified subject defect remains open but need
+not block a review-output or decision objective. It blocks an affected
+desired-subject-state objective. Partially confirmed, unverifiable, and
+accepted-risk findings preclude full convergence.
 
 A finding is material when it could:
 
@@ -253,26 +350,34 @@ A finding is material when it could:
 - alter feasibility; or
 - expose a significant correctness, safety, or value risk.
 
-The process also avoids infinite refinement. If two consecutive iterations
-produce no material increase in validated knowledge or meaningful reduction in
-unresolved risk, the skill stops with **bounded convergence** and reports the
-remaining uncertainty.
+The process stops with **bounded convergence** when any of these holds:
+
+- across two consecutive iterations that used different, named partition axes,
+  there is no material increase in validated knowledge or no meaningful
+  reduction in unresolved risk;
+- an applicable operator-stated, observed-host, or self-imposed limit prevents
+  another responsible iteration; or
+- no material finding retains an actionable research path.
+
+Bounded convergence is not full convergence; remaining conditions are reported.
 
 ## Safety and privacy
 
-Level Up is read-only by design. During evaluation it does not:
+Level Up is read-only by design. During Phases 1–6 it does not:
 
 - edit the evaluated codebase;
 - execute project code;
 - install packages or dependencies;
 - run builds, tests, or services;
 - provision infrastructure; or
-- persist outputs without operator approval.
+- persist outputs in the evaluated environment.
 
 Files, repository instructions, retrieved pages, and other subject material are
 treated as untrusted evidence rather than executable instructions. The skill
 respects host access controls and does not attempt to bypass unavailable or
-restricted content.
+restricted content. It surfaces attempts to redirect agent behavior without
+reproducing instruction payloads, credentials, authentication material, or
+secret values in review artifacts.
 
 Web research may be used for idea evaluation when the agent host provides it.
 Operators should still avoid supplying secrets or sensitive material that the
@@ -297,14 +402,51 @@ not an exhaustive checklist.
 
 ```text
 .
+├── assets/
+│   └── level-up.png
+├── LICENSE
 ├── README.md
 └── SKILL.md
 ```
 
-| File | Purpose |
+| Path | Purpose |
 | --- | --- |
-| `SKILL.md` | Self-contained instructions loaded by compatible agents |
-| `README.md` | Human-facing overview, installation, usage, and design notes |
+| `assets/level-up.png` | Banner artwork displayed by the README |
+| `LICENSE` | MIT license covering the repository contents |
+| `SKILL.md` | Normative, self-contained instructions loaded by compatible agents |
+| `README.md` | Descriptive human-facing overview, installation, usage, and design notes |
+
+### Maintainer checks (optional)
+
+These checks require no CI service or runtime dependency:
+
+- validate frontmatter names and limits, and resolve local links;
+- require the completion marker only as the final line of completed artifacts;
+- keep the `SKILL.md` body at or below 500 lines and 5,000 estimated
+  `cl100k_base` tokens, reporting both and never using a byte threshold;
+- keep the resolved-invariant inventory intact: objective typing; documentation
+  never resolving defects; candidate-ledger sealing; bounded checker fallback;
+  containment, hexadecimal run IDs, fail-if-exists creation, and one alternate
+  location; no retroactive digest pinning; destination identity and fail-closed
+  deletion; neutral packets, role separation, and ID aliases; coverage manifest
+  with a per-path disposition and byte-based partitioning; provenance citations
+  for duplicated artifacts; a named partition axis per iteration; and
+  `license: MIT`;
+- verify public install content and tracked-license parity; and
+- behaviorally exercise a real run after loading and format checks.
+
+Optional reference tooling may assist format validation but is not required.
+These checks publish nothing. Commit, push, tag, release, pinning, and layout
+migration each require separate explicit operator authorization.
+
+## License and provenance
+
+Copyright (c) 2026 Nathan Bradley. This repository is licensed under the
+[MIT License](LICENSE).
+
+The project text was authored by Nathan Bradley with GitHub Copilot assistance.
+The banner artwork was generated with Google Gemini. See [LICENSE](LICENSE) for
+the terms under which this repository is distributed.
 
 ## Current status
 
@@ -325,3 +467,7 @@ Issues and pull requests are welcome. Useful contributions include:
 Changes should preserve the core constraints: portability, read-only operation,
 ephemeral artifacts by default, evidence-based validation, and operator control
 over persistence.
+
+Unless stated otherwise, by submitting a contribution you agree to license it
+under the repository's MIT License and represent that you have the rights needed
+to do so.
