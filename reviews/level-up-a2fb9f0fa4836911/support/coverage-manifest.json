@@ -1,0 +1,1861 @@
+{
+  "subject": "C:\\Users\\nabradl\\Repos\\tools\\copilot-skills\\loop2",
+  "generated_at": "2026-08-24T04:51:02.5890392Z",
+  "exclusion_rule": "Exclude binary, generated, vendored, dependency, cache, and build output only when present; none observed in the resolved subject tree.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "size": 19,
+      "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
+      "disposition": "assigned"
+    },
+    {
+      "path": "agents/loop2-conformance-checker.agent.md",
+      "size": 1755,
+      "sha256": "07a1140de444389599c87fbb1f2176d267c3283a3e67807f29987cfb1c70cc8f",
+      "disposition": "assigned"
+    },
+    {
+      "path": "install.ps1",
+      "size": 60863,
+      "sha256": "435a1f18c582584a71d76e9b4ab1a7742ab8e10f77390e47e5d7a58e873b1c99",
+      "disposition": "assigned"
+    },
+    {
+      "path": "install.sh",
+      "size": 35005,
+      "sha256": "21822851646fe0308c5d69c980cfccd12442eb0506e12109db55d1f311638648",
+      "disposition": "assigned"
+    },
+    {
+      "path": "LEVEL-UP.md",
+      "size": 5484,
+      "sha256": "ce85e341cb9d00191ad7cf592e01b7984b1059eeef8ba0f4322c6dc6f8bed802",
+      "disposition": "assigned"
+    },
+    {
+      "path": "proposed_upgrade.md",
+      "size": 8923,
+      "sha256": "9ba65549fe65a79cbd06d496c60715ec60b5f5728b10e7109a882a899a54aa40",
+      "disposition": "assigned"
+    },
+    {
+      "path": "README.md",
+      "size": 39542,
+      "sha256": "ff598cc8671f674e8892eae9355e13432a070ea9db791430685b803b826617d4",
+      "disposition": "assigned"
+    },
+    {
+      "path": "skill.manifest.json",
+      "size": 256,
+      "sha256": "8304c20cf52e1c75e0558a0f63c1599c366d6635d5b6720b5604b41f48fe9e72",
+      "disposition": "assigned"
+    },
+    {
+      "path": "SKILL.md",
+      "size": 56276,
+      "sha256": "761f0955e663e8b21a0adb2853fce16d7e7b32799031fdf24ef06d03f29d374c",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/check_advisory_result.py",
+      "size": 8925,
+      "sha256": "67d9a86666f5ad786ae8d881f6cfda710941204f71925ac5767888f62b19f6dd",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/check_ledger.py",
+      "size": 101524,
+      "sha256": "ddaa96569f87a26902d93a8bc5252dc1128c1f3cad7003fea56869fd3b5f25ab",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/bad_model_topology/ledger.sql",
+      "size": 8900,
+      "sha256": "543f42534623c3efd01ab2afb080cf8cc4d3c637615702dbe33e3859a543f6d4",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/conformance/deterministic-checker.md",
+      "size": 32,
+      "sha256": "d34d11b3fb757a04e3a2b31c19cb112ef02932703ba737c77353ad38705864f5",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/conformance/frozen-packet.md",
+      "size": 16,
+      "sha256": "15d61a7d56d58fd65b28085954c1af32dbe6563bcb34d3ceeb97b6ac728525e4",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/ledger-snapshots/02-research-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/ledger-snapshots/04-scope-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/ledger-snapshots/06-design-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/ledger-snapshots/08-execution-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/ledger.sql",
+      "size": 27653,
+      "sha256": "2d3fec203f61d3eed9994277bd1173b00a570fed58ddc2a13d1dc9eea31e9977",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/model-profile.md",
+      "size": 23,
+      "sha256": "c360fe0880275b0b6f83296e210c7eebdabbf986d5a4bbdf25a9c098cce219f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/01-research/v1/synthesis-v1.md",
+      "size": 27,
+      "sha256": "11a8989cff73a9cc3137e4bb5646af5add3ee50b05fb8dbfe2210ff5e004fefc",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/02-research-review/v1/r1/opus-1-a1.md",
+      "size": 438,
+      "sha256": "4c496640b019609ea0707e989c263402295de1955cc9433cb4c1e1b11c44b603",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/02-research-review/v1/r1/opus-2-a1.md",
+      "size": 438,
+      "sha256": "4c496640b019609ea0707e989c263402295de1955cc9433cb4c1e1b11c44b603",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/02-research-review/v1/r1/sol-1-a1.md",
+      "size": 438,
+      "sha256": "4c496640b019609ea0707e989c263402295de1955cc9433cb4c1e1b11c44b603",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/02-research-review/v1/r1/sol-2-a1.md",
+      "size": 438,
+      "sha256": "4c496640b019609ea0707e989c263402295de1955cc9433cb4c1e1b11c44b603",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/02-research-review/v1/synthesis-v1.md",
+      "size": 34,
+      "sha256": "9daa2497e0afad4999f81b82dd904a96cf4392cb2c0e94c032c3d3cece50190c",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/03-scope/v1/synthesis-v1.md",
+      "size": 24,
+      "sha256": "3d54a44646ed9e1e7ee3f0095295f8eb94653897afea2f5f576268f5430e02a9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/04-scope-review/v1/r1/opus-1-a1.md",
+      "size": 435,
+      "sha256": "01c555ba7ec0ff2be18e6f99d013c81494394f388d88843142d0e45cd1611109",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/04-scope-review/v1/r1/opus-2-a1.md",
+      "size": 435,
+      "sha256": "01c555ba7ec0ff2be18e6f99d013c81494394f388d88843142d0e45cd1611109",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/04-scope-review/v1/r1/sol-1-a1.md",
+      "size": 435,
+      "sha256": "01c555ba7ec0ff2be18e6f99d013c81494394f388d88843142d0e45cd1611109",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/04-scope-review/v1/r1/sol-2-a1.md",
+      "size": 435,
+      "sha256": "01c555ba7ec0ff2be18e6f99d013c81494394f388d88843142d0e45cd1611109",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/04-scope-review/v1/synthesis-v1.md",
+      "size": 31,
+      "sha256": "c9111ad54238a91869614db05208c15ac064dbecb811c1c0dab647bfbb164b0d",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/05-design-record/v1/synthesis-v1.md",
+      "size": 32,
+      "sha256": "598d654504c497eaf9e31a789106f4cb1bdb38bd067c841ff8baed64f54d3630",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/06-design-review/v1/r1/opus-1-a1.md",
+      "size": 443,
+      "sha256": "29bc7de8e83cd4932ec48b232dd9698db011379b2c315e86bade381524ab1e15",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/06-design-review/v1/r1/opus-2-a1.md",
+      "size": 443,
+      "sha256": "29bc7de8e83cd4932ec48b232dd9698db011379b2c315e86bade381524ab1e15",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/06-design-review/v1/r1/sol-1-a1.md",
+      "size": 443,
+      "sha256": "29bc7de8e83cd4932ec48b232dd9698db011379b2c315e86bade381524ab1e15",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/06-design-review/v1/r1/sol-2-a1.md",
+      "size": 443,
+      "sha256": "29bc7de8e83cd4932ec48b232dd9698db011379b2c315e86bade381524ab1e15",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/06-design-review/v1/synthesis-v1.md",
+      "size": 32,
+      "sha256": "b7a1ff28d8e9146c7bc8e8442050b24c0cd6ce02a088ca510162992ab4c27a4c",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/07-execute/v1/apply-log-v1.md",
+      "size": 12,
+      "sha256": "06be875f9ef86a525d9f99cfbbed174f5b326f9e35b21ae2ffd7750fb5e2e9ae",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/07-execute/v1/synthesis-v1.md",
+      "size": 26,
+      "sha256": "e4c962a41dc10d68d1868276aebc0293e126f94db83911c6ea47d7500dadef70",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/08-execution-review/v1/r1/opus-1-a1.md",
+      "size": 437,
+      "sha256": "a1c6ab2cbc90b30d43eb205c82f020d6b42a29d10bfc3c88d3414322d4ad8d6e",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/08-execution-review/v1/r1/opus-2-a1.md",
+      "size": 437,
+      "sha256": "a1c6ab2cbc90b30d43eb205c82f020d6b42a29d10bfc3c88d3414322d4ad8d6e",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/08-execution-review/v1/r1/sol-1-a1.md",
+      "size": 437,
+      "sha256": "a1c6ab2cbc90b30d43eb205c82f020d6b42a29d10bfc3c88d3414322d4ad8d6e",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/08-execution-review/v1/r1/sol-2-a1.md",
+      "size": 437,
+      "sha256": "a1c6ab2cbc90b30d43eb205c82f020d6b42a29d10bfc3c88d3414322d4ad8d6e",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/08-execution-review/v1/synthesis-v1.md",
+      "size": 35,
+      "sha256": "5c6c701e65571c74e0049e9f3c933122259d7b6870e6e8edf560db399945e376",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/phases/09-final-record/v1/synthesis-v1.md",
+      "size": 31,
+      "sha256": "9bc9e353d21ac866d5403cfc636fa4c16239217071806a3e2823387cf17e5006",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_missing_ancestry/preflight.md",
+      "size": 19,
+      "sha256": "5044adda56ab54b725c4a89d29a237b6d40228e8df52fa8ac508c7696cb00ff3",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_prefix_only/conformance/deterministic-checker.md",
+      "size": 32,
+      "sha256": "d34d11b3fb757a04e3a2b31c19cb112ef02932703ba737c77353ad38705864f5",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_prefix_only/conformance/frozen-packet.md",
+      "size": 16,
+      "sha256": "15d61a7d56d58fd65b28085954c1af32dbe6563bcb34d3ceeb97b6ac728525e4",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_prefix_only/ledger-snapshots/02-research-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_prefix_only/ledger.sql",
+      "size": 13538,
+      "sha256": "0bcd4e79e2ae36c7eb2a118d19672294a9fe779de9a987537199975fe02c5df7",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_prefix_only/model-profile.md",
+      "size": 23,
+      "sha256": "c360fe0880275b0b6f83296e210c7eebdabbf986d5a4bbdf25a9c098cce219f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_prefix_only/phases/01-research/v1/synthesis-v1.md",
+      "size": 27,
+      "sha256": "11a8989cff73a9cc3137e4bb5646af5add3ee50b05fb8dbfe2210ff5e004fefc",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_prefix_only/phases/02-research-review/v1/r1/opus-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_prefix_only/phases/02-research-review/v1/r1/opus-2-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_prefix_only/phases/02-research-review/v1/r1/sol-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_prefix_only/phases/02-research-review/v1/r1/sol-2-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_prefix_only/phases/02-research-review/v1/synthesis-v1.md",
+      "size": 34,
+      "sha256": "9daa2497e0afad4999f81b82dd904a96cf4392cb2c0e94c032c3d3cece50190c",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_prefix_only/phases/09-final-record/v1/synthesis-v1.md",
+      "size": 31,
+      "sha256": "9bc9e353d21ac866d5403cfc636fa4c16239217071806a3e2823387cf17e5006",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/completed_prefix_only/preflight.md",
+      "size": 19,
+      "sha256": "5044adda56ab54b725c4a89d29a237b6d40228e8df52fa8ac508c7696cb00ff3",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/conformance/deterministic-checker.md",
+      "size": 32,
+      "sha256": "d34d11b3fb757a04e3a2b31c19cb112ef02932703ba737c77353ad38705864f5",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/conformance/frozen-packet.md",
+      "size": 16,
+      "sha256": "15d61a7d56d58fd65b28085954c1af32dbe6563bcb34d3ceeb97b6ac728525e4",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/ledger-snapshots/02-research-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/ledger-snapshots/04-scope-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/ledger-snapshots/06-design-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/ledger-snapshots/08-execution-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/ledger.sql",
+      "size": 30248,
+      "sha256": "3854ce4a9920c9b523f45800bbc4f6bc9dd208e7a3b820900c98cd7df1d8cb9c",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/model-profile.md",
+      "size": 23,
+      "sha256": "c360fe0880275b0b6f83296e210c7eebdabbf986d5a4bbdf25a9c098cce219f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/01-research/v1/synthesis-v1.md",
+      "size": 27,
+      "sha256": "11a8989cff73a9cc3137e4bb5646af5add3ee50b05fb8dbfe2210ff5e004fefc",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/02-research-review/v1/r1/opus-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/02-research-review/v1/r1/opus-2-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/02-research-review/v1/r1/sol-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/02-research-review/v1/r1/sol-2-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/02-research-review/v1/synthesis-v1.md",
+      "size": 34,
+      "sha256": "9daa2497e0afad4999f81b82dd904a96cf4392cb2c0e94c032c3d3cece50190c",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/03-scope/v1/synthesis-v1.md",
+      "size": 24,
+      "sha256": "3d54a44646ed9e1e7ee3f0095295f8eb94653897afea2f5f576268f5430e02a9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/04-scope-review/v1/r1/opus-1-a1.md",
+      "size": 435,
+      "sha256": "01c555ba7ec0ff2be18e6f99d013c81494394f388d88843142d0e45cd1611109",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/04-scope-review/v1/r1/opus-2-a1.md",
+      "size": 435,
+      "sha256": "01c555ba7ec0ff2be18e6f99d013c81494394f388d88843142d0e45cd1611109",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/04-scope-review/v1/r1/sol-1-a1.md",
+      "size": 435,
+      "sha256": "01c555ba7ec0ff2be18e6f99d013c81494394f388d88843142d0e45cd1611109",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/04-scope-review/v1/r1/sol-2-a1.md",
+      "size": 435,
+      "sha256": "01c555ba7ec0ff2be18e6f99d013c81494394f388d88843142d0e45cd1611109",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/04-scope-review/v1/synthesis-v1.md",
+      "size": 31,
+      "sha256": "c9111ad54238a91869614db05208c15ac064dbecb811c1c0dab647bfbb164b0d",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/05-design-record/v1/synthesis-v1.md",
+      "size": 32,
+      "sha256": "598d654504c497eaf9e31a789106f4cb1bdb38bd067c841ff8baed64f54d3630",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/06-design-review/v1/r1/opus-1-a1.md",
+      "size": 443,
+      "sha256": "29bc7de8e83cd4932ec48b232dd9698db011379b2c315e86bade381524ab1e15",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/06-design-review/v1/r1/opus-2-a1.md",
+      "size": 443,
+      "sha256": "29bc7de8e83cd4932ec48b232dd9698db011379b2c315e86bade381524ab1e15",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/06-design-review/v1/r1/sol-1-a1.md",
+      "size": 443,
+      "sha256": "29bc7de8e83cd4932ec48b232dd9698db011379b2c315e86bade381524ab1e15",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/06-design-review/v1/r1/sol-2-a1.md",
+      "size": 443,
+      "sha256": "29bc7de8e83cd4932ec48b232dd9698db011379b2c315e86bade381524ab1e15",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/06-design-review/v1/synthesis-v1.md",
+      "size": 32,
+      "sha256": "b7a1ff28d8e9146c7bc8e8442050b24c0cd6ce02a088ca510162992ab4c27a4c",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/07-execute/v1/apply-log-v1.md",
+      "size": 12,
+      "sha256": "06be875f9ef86a525d9f99cfbbed174f5b326f9e35b21ae2ffd7750fb5e2e9ae",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/07-execute/v1/r1/opus-1-a1.md",
+      "size": 521,
+      "sha256": "12d5f162ee950e371621ae81bb268f38febe46ef0d4722d337b46e0182870143",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/07-execute/v1/r1/opus-2-a1.md",
+      "size": 521,
+      "sha256": "12d5f162ee950e371621ae81bb268f38febe46ef0d4722d337b46e0182870143",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/07-execute/v1/r1/sol-1-a1.md",
+      "size": 521,
+      "sha256": "12d5f162ee950e371621ae81bb268f38febe46ef0d4722d337b46e0182870143",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/07-execute/v1/r1/sol-2-a1.md",
+      "size": 521,
+      "sha256": "12d5f162ee950e371621ae81bb268f38febe46ef0d4722d337b46e0182870143",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/07-execute/v1/synthesis-v1.md",
+      "size": 26,
+      "sha256": "e4c962a41dc10d68d1868276aebc0293e126f94db83911c6ea47d7500dadef70",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/08-execution-review/v1/r1/opus-1-a1.md",
+      "size": 437,
+      "sha256": "a1c6ab2cbc90b30d43eb205c82f020d6b42a29d10bfc3c88d3414322d4ad8d6e",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/08-execution-review/v1/r1/opus-2-a1.md",
+      "size": 437,
+      "sha256": "a1c6ab2cbc90b30d43eb205c82f020d6b42a29d10bfc3c88d3414322d4ad8d6e",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/08-execution-review/v1/r1/sol-1-a1.md",
+      "size": 437,
+      "sha256": "a1c6ab2cbc90b30d43eb205c82f020d6b42a29d10bfc3c88d3414322d4ad8d6e",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/08-execution-review/v1/r1/sol-2-a1.md",
+      "size": 437,
+      "sha256": "a1c6ab2cbc90b30d43eb205c82f020d6b42a29d10bfc3c88d3414322d4ad8d6e",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/08-execution-review/v1/synthesis-v1.md",
+      "size": 35,
+      "sha256": "5c6c701e65571c74e0049e9f3c933122259d7b6870e6e8edf560db399945e376",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/09-final-record/v1/r1/opus-1-a1.md",
+      "size": 521,
+      "sha256": "12d5f162ee950e371621ae81bb268f38febe46ef0d4722d337b46e0182870143",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/09-final-record/v1/r1/opus-2-a1.md",
+      "size": 521,
+      "sha256": "12d5f162ee950e371621ae81bb268f38febe46ef0d4722d337b46e0182870143",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/09-final-record/v1/r1/sol-1-a1.md",
+      "size": 521,
+      "sha256": "12d5f162ee950e371621ae81bb268f38febe46ef0d4722d337b46e0182870143",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/09-final-record/v1/r1/sol-2-a1.md",
+      "size": 521,
+      "sha256": "12d5f162ee950e371621ae81bb268f38febe46ef0d4722d337b46e0182870143",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/phases/09-final-record/v1/synthesis-v1.md",
+      "size": 31,
+      "sha256": "9bc9e353d21ac866d5403cfc636fa4c16239217071806a3e2823387cf17e5006",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant_completed_run/preflight.md",
+      "size": 19,
+      "sha256": "5044adda56ab54b725c4a89d29a237b6d40228e8df52fa8ac508c7696cb00ff3",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/conformance/deterministic-checker.md",
+      "size": 32,
+      "sha256": "d34d11b3fb757a04e3a2b31c19cb112ef02932703ba737c77353ad38705864f5",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/conformance/frozen-packet.md",
+      "size": 16,
+      "sha256": "15d61a7d56d58fd65b28085954c1af32dbe6563bcb34d3ceeb97b6ac728525e4",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/ledger-snapshots/02-research-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/ledger-snapshots/04-scope-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/ledger-snapshots/06-design-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/ledger-snapshots/08-execution-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/ledger.sql",
+      "size": 27094,
+      "sha256": "24bf87d88a6b09b2f9e1cd8c5b3a41065e55a79201e759763ee6eedbfe7595cb",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/model-profile.md",
+      "size": 23,
+      "sha256": "c360fe0880275b0b6f83296e210c7eebdabbf986d5a4bbdf25a9c098cce219f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/01-research/v1/synthesis-v1.md",
+      "size": 27,
+      "sha256": "11a8989cff73a9cc3137e4bb5646af5add3ee50b05fb8dbfe2210ff5e004fefc",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/02-research-review/v1/r1/opus-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/02-research-review/v1/r1/opus-2-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/02-research-review/v1/r1/sol-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/02-research-review/v1/r1/sol-2-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/02-research-review/v1/synthesis-v1.md",
+      "size": 34,
+      "sha256": "9daa2497e0afad4999f81b82dd904a96cf4392cb2c0e94c032c3d3cece50190c",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/03-scope/v1/synthesis-v1.md",
+      "size": 24,
+      "sha256": "3d54a44646ed9e1e7ee3f0095295f8eb94653897afea2f5f576268f5430e02a9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/04-scope-review/v1/r1/opus-1-a1.md",
+      "size": 435,
+      "sha256": "01c555ba7ec0ff2be18e6f99d013c81494394f388d88843142d0e45cd1611109",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/04-scope-review/v1/r1/opus-2-a1.md",
+      "size": 435,
+      "sha256": "01c555ba7ec0ff2be18e6f99d013c81494394f388d88843142d0e45cd1611109",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/04-scope-review/v1/r1/sol-1-a1.md",
+      "size": 435,
+      "sha256": "01c555ba7ec0ff2be18e6f99d013c81494394f388d88843142d0e45cd1611109",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/04-scope-review/v1/r1/sol-2-a1.md",
+      "size": 435,
+      "sha256": "01c555ba7ec0ff2be18e6f99d013c81494394f388d88843142d0e45cd1611109",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/04-scope-review/v1/synthesis-v1.md",
+      "size": 31,
+      "sha256": "c9111ad54238a91869614db05208c15ac064dbecb811c1c0dab647bfbb164b0d",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/05-design-record/v1/synthesis-v1.md",
+      "size": 32,
+      "sha256": "598d654504c497eaf9e31a789106f4cb1bdb38bd067c841ff8baed64f54d3630",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/06-design-review/v1/r1/opus-1-a1.md",
+      "size": 443,
+      "sha256": "29bc7de8e83cd4932ec48b232dd9698db011379b2c315e86bade381524ab1e15",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/06-design-review/v1/r1/opus-2-a1.md",
+      "size": 443,
+      "sha256": "29bc7de8e83cd4932ec48b232dd9698db011379b2c315e86bade381524ab1e15",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/06-design-review/v1/r1/sol-1-a1.md",
+      "size": 443,
+      "sha256": "29bc7de8e83cd4932ec48b232dd9698db011379b2c315e86bade381524ab1e15",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/06-design-review/v1/r1/sol-2-a1.md",
+      "size": 443,
+      "sha256": "29bc7de8e83cd4932ec48b232dd9698db011379b2c315e86bade381524ab1e15",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/06-design-review/v1/synthesis-v1.md",
+      "size": 32,
+      "sha256": "b7a1ff28d8e9146c7bc8e8442050b24c0cd6ce02a088ca510162992ab4c27a4c",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/07-execute/v1/apply-log-v1.md",
+      "size": 12,
+      "sha256": "06be875f9ef86a525d9f99cfbbed174f5b326f9e35b21ae2ffd7750fb5e2e9ae",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/07-execute/v1/r1/opus-1-a1.md",
+      "size": 521,
+      "sha256": "12d5f162ee950e371621ae81bb268f38febe46ef0d4722d337b46e0182870143",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/07-execute/v1/r1/opus-2-a1.md",
+      "size": 521,
+      "sha256": "12d5f162ee950e371621ae81bb268f38febe46ef0d4722d337b46e0182870143",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/07-execute/v1/r1/sol-1-a1.md",
+      "size": 521,
+      "sha256": "12d5f162ee950e371621ae81bb268f38febe46ef0d4722d337b46e0182870143",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/07-execute/v1/r1/sol-2-a1.md",
+      "size": 521,
+      "sha256": "12d5f162ee950e371621ae81bb268f38febe46ef0d4722d337b46e0182870143",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/07-execute/v1/synthesis-v1.md",
+      "size": 26,
+      "sha256": "e4c962a41dc10d68d1868276aebc0293e126f94db83911c6ea47d7500dadef70",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/08-execution-review/v1/r1/opus-1-a1.md",
+      "size": 437,
+      "sha256": "a1c6ab2cbc90b30d43eb205c82f020d6b42a29d10bfc3c88d3414322d4ad8d6e",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/08-execution-review/v1/r1/opus-2-a1.md",
+      "size": 437,
+      "sha256": "a1c6ab2cbc90b30d43eb205c82f020d6b42a29d10bfc3c88d3414322d4ad8d6e",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/08-execution-review/v1/r1/sol-1-a1.md",
+      "size": 437,
+      "sha256": "a1c6ab2cbc90b30d43eb205c82f020d6b42a29d10bfc3c88d3414322d4ad8d6e",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/08-execution-review/v1/r1/sol-2-a1.md",
+      "size": 437,
+      "sha256": "a1c6ab2cbc90b30d43eb205c82f020d6b42a29d10bfc3c88d3414322d4ad8d6e",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/phases/08-execution-review/v1/synthesis-v1.md",
+      "size": 35,
+      "sha256": "5c6c701e65571c74e0049e9f3c933122259d7b6870e6e8edf560db399945e376",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/conformant/preflight.md",
+      "size": 19,
+      "sha256": "5044adda56ab54b725c4a89d29a237b6d40228e8df52fa8ac508c7696cb00ff3",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/disconnected_transition/conformance/deterministic-checker.md",
+      "size": 32,
+      "sha256": "d34d11b3fb757a04e3a2b31c19cb112ef02932703ba737c77353ad38705864f5",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/disconnected_transition/conformance/frozen-packet.md",
+      "size": 16,
+      "sha256": "15d61a7d56d58fd65b28085954c1af32dbe6563bcb34d3ceeb97b6ac728525e4",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/disconnected_transition/ledger-snapshots/02-research-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/disconnected_transition/ledger.sql",
+      "size": 13912,
+      "sha256": "ce26ea6c95d2bdc21e01287530fe6b26ba37cfc32f45eb206665c6f5545ee17a",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/disconnected_transition/model-profile.md",
+      "size": 23,
+      "sha256": "c360fe0880275b0b6f83296e210c7eebdabbf986d5a4bbdf25a9c098cce219f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/disconnected_transition/phases/01-research/v1/synthesis-v1.md",
+      "size": 27,
+      "sha256": "11a8989cff73a9cc3137e4bb5646af5add3ee50b05fb8dbfe2210ff5e004fefc",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/disconnected_transition/phases/02-research-review/v1/r1/opus-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/disconnected_transition/phases/02-research-review/v1/r1/opus-2-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/disconnected_transition/phases/02-research-review/v1/r1/sol-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/disconnected_transition/phases/02-research-review/v1/r1/sol-2-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/disconnected_transition/phases/02-research-review/v1/synthesis-v1.md",
+      "size": 34,
+      "sha256": "9daa2497e0afad4999f81b82dd904a96cf4392cb2c0e94c032c3d3cece50190c",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/disconnected_transition/phases/03-scope/v1/synthesis-v1.md",
+      "size": 24,
+      "sha256": "3d54a44646ed9e1e7ee3f0095295f8eb94653897afea2f5f576268f5430e02a9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/disconnected_transition/preflight.md",
+      "size": 19,
+      "sha256": "5044adda56ab54b725c4a89d29a237b6d40228e8df52fa8ac508c7696cb00ff3",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/generate_fixtures.py",
+      "size": 40402,
+      "sha256": "aad4445243268186fee87e6a7058910be4efef24339a470e554aff70ec2e8e40",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/indeterminate/conformance/deterministic-checker.md",
+      "size": 32,
+      "sha256": "d34d11b3fb757a04e3a2b31c19cb112ef02932703ba737c77353ad38705864f5",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/indeterminate/conformance/frozen-packet.md",
+      "size": 16,
+      "sha256": "15d61a7d56d58fd65b28085954c1af32dbe6563bcb34d3ceeb97b6ac728525e4",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/indeterminate/ledger.sql",
+      "size": 12630,
+      "sha256": "ee137522d82139c2b8be2a891716b2759f762e9c85ad2131c3c2b652a0bd34fc",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/indeterminate/model-profile.md",
+      "size": 23,
+      "sha256": "c360fe0880275b0b6f83296e210c7eebdabbf986d5a4bbdf25a9c098cce219f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/indeterminate/phases/01-research/v1/synthesis-v1.md",
+      "size": 27,
+      "sha256": "11a8989cff73a9cc3137e4bb5646af5add3ee50b05fb8dbfe2210ff5e004fefc",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/indeterminate/phases/02-research-review/v1/r1/opus-1-a1.md",
+      "size": 438,
+      "sha256": "4c496640b019609ea0707e989c263402295de1955cc9433cb4c1e1b11c44b603",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/indeterminate/phases/02-research-review/v1/r1/opus-2-a1.md",
+      "size": 438,
+      "sha256": "4c496640b019609ea0707e989c263402295de1955cc9433cb4c1e1b11c44b603",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/indeterminate/phases/02-research-review/v1/r1/sol-1-a1.md",
+      "size": 438,
+      "sha256": "4c496640b019609ea0707e989c263402295de1955cc9433cb4c1e1b11c44b603",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/indeterminate/phases/02-research-review/v1/r1/sol-2-a1.md",
+      "size": 438,
+      "sha256": "4c496640b019609ea0707e989c263402295de1955cc9433cb4c1e1b11c44b603",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/indeterminate/phases/02-research-review/v1/synthesis-v1.md",
+      "size": 34,
+      "sha256": "9daa2497e0afad4999f81b82dd904a96cf4392cb2c0e94c032c3d3cece50190c",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/indeterminate/preflight.md",
+      "size": 19,
+      "sha256": "5044adda56ab54b725c4a89d29a237b6d40228e8df52fa8ac508c7696cb00ff3",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/malformed_numeric/ledger.sql",
+      "size": 13117,
+      "sha256": "1f507649a21eac518900799cd645f43b0e2b907b1224d013e935d0865407f765",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/malformed_schema_version/ledger.sql",
+      "size": 13298,
+      "sha256": "e220b41f6046cb60bb3e77f8cc0c2ddad1885ed2f5f1c612e264f5516a02c79f",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/malformed/ledger.sql",
+      "size": 60,
+      "sha256": "381e9eb9c9b18e5364896f12350f42b7563b92772ec30790ced257877e5ab545",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/missing_artifact/conformance/deterministic-checker.md",
+      "size": 32,
+      "sha256": "d34d11b3fb757a04e3a2b31c19cb112ef02932703ba737c77353ad38705864f5",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/missing_artifact/conformance/frozen-packet.md",
+      "size": 16,
+      "sha256": "15d61a7d56d58fd65b28085954c1af32dbe6563bcb34d3ceeb97b6ac728525e4",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/missing_artifact/ledger.sql",
+      "size": 13090,
+      "sha256": "682068f50e3dc12cde90ea7d228d210487a547073e18baa50fff0da9b0950230",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/missing_artifact/model-profile.md",
+      "size": 23,
+      "sha256": "c360fe0880275b0b6f83296e210c7eebdabbf986d5a4bbdf25a9c098cce219f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/missing_artifact/phases/01-research/v1/synthesis-v1.md",
+      "size": 27,
+      "sha256": "11a8989cff73a9cc3137e4bb5646af5add3ee50b05fb8dbfe2210ff5e004fefc",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/missing_artifact/phases/02-research-review/v1/r1/opus-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/missing_artifact/phases/02-research-review/v1/r1/opus-2-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/missing_artifact/phases/02-research-review/v1/r1/sol-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/missing_artifact/phases/02-research-review/v1/r1/sol-2-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/missing_artifact/phases/02-research-review/v1/synthesis-v1.md",
+      "size": 34,
+      "sha256": "9daa2497e0afad4999f81b82dd904a96cf4392cb2c0e94c032c3d3cece50190c",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/missing_artifact/preflight.md",
+      "size": 19,
+      "sha256": "5044adda56ab54b725c4a89d29a237b6d40228e8df52fa8ac508c7696cb00ff3",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/missing_capabilities/ledger.sql",
+      "size": 7904,
+      "sha256": "dfda0e5a75fa28433c3e9e700f9bbac3c30a06492ba013dc38dd3e7ba5b3d7bf",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/missing_schema_column/ledger.sql",
+      "size": 13063,
+      "sha256": "27d523d8b0ab9997a8da2b27a9072a937698d80cfb5316385ded8ce1fafb3320",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/multiple_run_rows/ledger.sql",
+      "size": 9474,
+      "sha256": "6c69a15574793bd37d99f243fb9ab15c5b3752fe14316c4c23c202dd2c5456c2",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/non_conformant/conformance/deterministic-checker.md",
+      "size": 32,
+      "sha256": "d34d11b3fb757a04e3a2b31c19cb112ef02932703ba737c77353ad38705864f5",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/non_conformant/conformance/frozen-packet.md",
+      "size": 16,
+      "sha256": "15d61a7d56d58fd65b28085954c1af32dbe6563bcb34d3ceeb97b6ac728525e4",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/non_conformant/ledger-snapshots/02-research-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/non_conformant/ledger.sql",
+      "size": 14587,
+      "sha256": "7d7a85d2e19fa037898f15448710bcf9a396edc84d3a2ba7f1735c676f9d1f74",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/non_conformant/model-profile.md",
+      "size": 23,
+      "sha256": "c360fe0880275b0b6f83296e210c7eebdabbf986d5a4bbdf25a9c098cce219f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/non_conformant/phases/01-research/v1/synthesis-v1.md",
+      "size": 27,
+      "sha256": "11a8989cff73a9cc3137e4bb5646af5add3ee50b05fb8dbfe2210ff5e004fefc",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/non_conformant/phases/02-research-review/v1/r1/opus-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/non_conformant/phases/02-research-review/v1/r1/opus-2-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/non_conformant/phases/02-research-review/v1/r1/sol-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/non_conformant/phases/02-research-review/v1/r1/sol-2-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/non_conformant/phases/02-research-review/v1/synthesis-v1.md",
+      "size": 34,
+      "sha256": "9daa2497e0afad4999f81b82dd904a96cf4392cb2c0e94c032c3d3cece50190c",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/non_conformant/phases/07-execute/v1/apply-log-v1.md",
+      "size": 12,
+      "sha256": "06be875f9ef86a525d9f99cfbbed174f5b326f9e35b21ae2ffd7750fb5e2e9ae",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/non_conformant/phases/07-execute/v1/synthesis-v1.md",
+      "size": 26,
+      "sha256": "e4c962a41dc10d68d1868276aebc0293e126f94db83911c6ea47d7500dadef70",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/non_conformant/phases/09-final-record/v1/synthesis-v1.md",
+      "size": 31,
+      "sha256": "9bc9e353d21ac866d5403cfc636fa4c16239217071806a3e2823387cf17e5006",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/non_conformant/preflight.md",
+      "size": 19,
+      "sha256": "5044adda56ab54b725c4a89d29a237b6d40228e8df52fa8ac508c7696cb00ff3",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/phase07_apply_backed_only_by_phase02/conformance/deterministic-checker.md",
+      "size": 32,
+      "sha256": "d34d11b3fb757a04e3a2b31c19cb112ef02932703ba737c77353ad38705864f5",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/phase07_apply_backed_only_by_phase02/conformance/frozen-packet.md",
+      "size": 16,
+      "sha256": "15d61a7d56d58fd65b28085954c1af32dbe6563bcb34d3ceeb97b6ac728525e4",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/phase07_apply_backed_only_by_phase02/ledger-snapshots/02-research-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/phase07_apply_backed_only_by_phase02/ledger.sql",
+      "size": 14273,
+      "sha256": "dca0e21a2270a51442ceed74f56dbca26615937ab376127dabb835295625921a",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/phase07_apply_backed_only_by_phase02/model-profile.md",
+      "size": 23,
+      "sha256": "c360fe0880275b0b6f83296e210c7eebdabbf986d5a4bbdf25a9c098cce219f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/phase07_apply_backed_only_by_phase02/phases/01-research/v1/synthesis-v1.md",
+      "size": 27,
+      "sha256": "11a8989cff73a9cc3137e4bb5646af5add3ee50b05fb8dbfe2210ff5e004fefc",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/phase07_apply_backed_only_by_phase02/phases/02-research-review/v1/r1/opus-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/phase07_apply_backed_only_by_phase02/phases/02-research-review/v1/r1/opus-2-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/phase07_apply_backed_only_by_phase02/phases/02-research-review/v1/r1/sol-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/phase07_apply_backed_only_by_phase02/phases/02-research-review/v1/r1/sol-2-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/phase07_apply_backed_only_by_phase02/phases/02-research-review/v1/synthesis-v1.md",
+      "size": 34,
+      "sha256": "9daa2497e0afad4999f81b82dd904a96cf4392cb2c0e94c032c3d3cece50190c",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/phase07_apply_backed_only_by_phase02/phases/07-execute/v1/apply-log-v1.md",
+      "size": 12,
+      "sha256": "06be875f9ef86a525d9f99cfbbed174f5b326f9e35b21ae2ffd7750fb5e2e9ae",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/phase07_apply_backed_only_by_phase02/phases/07-execute/v1/synthesis-v1.md",
+      "size": 26,
+      "sha256": "e4c962a41dc10d68d1868276aebc0293e126f94db83911c6ea47d7500dadef70",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/phase07_apply_backed_only_by_phase02/preflight.md",
+      "size": 19,
+      "sha256": "5044adda56ab54b725c4a89d29a237b6d40228e8df52fa8ac508c7696cb00ff3",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_version_gap/conformance/deterministic-checker.md",
+      "size": 32,
+      "sha256": "d34d11b3fb757a04e3a2b31c19cb112ef02932703ba737c77353ad38705864f5",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_version_gap/conformance/frozen-packet.md",
+      "size": 16,
+      "sha256": "15d61a7d56d58fd65b28085954c1af32dbe6563bcb34d3ceeb97b6ac728525e4",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_version_gap/ledger-snapshots/02-research-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_version_gap/ledger.sql",
+      "size": 13836,
+      "sha256": "4b22f222bffb0ba97bc4bdb848833933221f97d4e266d8ce83ac0d311d48d598",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_version_gap/model-profile.md",
+      "size": 23,
+      "sha256": "c360fe0880275b0b6f83296e210c7eebdabbf986d5a4bbdf25a9c098cce219f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_version_gap/phases/01-research/v1/synthesis-v1.md",
+      "size": 27,
+      "sha256": "11a8989cff73a9cc3137e4bb5646af5add3ee50b05fb8dbfe2210ff5e004fefc",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_version_gap/phases/01-research/v3/synthesis-v3.md",
+      "size": 27,
+      "sha256": "d3b6086e9289781326a60ce0d56c025a8f28a51d91203c3f9990308fa1e200b6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_version_gap/phases/02-research-review/v1/r1/opus-1-a1.md",
+      "size": 442,
+      "sha256": "65045f4a6618b51112cd761606b48be45bf43e68c8136ae8fe4f1dc0a5a55d5d",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_version_gap/phases/02-research-review/v1/r1/opus-2-a1.md",
+      "size": 442,
+      "sha256": "65045f4a6618b51112cd761606b48be45bf43e68c8136ae8fe4f1dc0a5a55d5d",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_version_gap/phases/02-research-review/v1/r1/sol-1-a1.md",
+      "size": 442,
+      "sha256": "65045f4a6618b51112cd761606b48be45bf43e68c8136ae8fe4f1dc0a5a55d5d",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_version_gap/phases/02-research-review/v1/r1/sol-2-a1.md",
+      "size": 442,
+      "sha256": "65045f4a6618b51112cd761606b48be45bf43e68c8136ae8fe4f1dc0a5a55d5d",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_version_gap/phases/02-research-review/v1/synthesis-v1.md",
+      "size": 34,
+      "sha256": "9daa2497e0afad4999f81b82dd904a96cf4392cb2c0e94c032c3d3cece50190c",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_version_gap/preflight.md",
+      "size": 19,
+      "sha256": "5044adda56ab54b725c4a89d29a237b6d40228e8df52fa8ac508c7696cb00ff3",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_wrong_source/conformance/deterministic-checker.md",
+      "size": 32,
+      "sha256": "d34d11b3fb757a04e3a2b31c19cb112ef02932703ba737c77353ad38705864f5",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_wrong_source/conformance/frozen-packet.md",
+      "size": 16,
+      "sha256": "15d61a7d56d58fd65b28085954c1af32dbe6563bcb34d3ceeb97b6ac728525e4",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_wrong_source/ledger-snapshots/02-research-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_wrong_source/ledger.sql",
+      "size": 14476,
+      "sha256": "99a9e9440b1eaf8c82e9894d13b9280deaba1a8c54137eac20c1a767e11b91a5",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_wrong_source/model-profile.md",
+      "size": 23,
+      "sha256": "c360fe0880275b0b6f83296e210c7eebdabbf986d5a4bbdf25a9c098cce219f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_wrong_source/phases/01-research/v1/synthesis-v1.md",
+      "size": 27,
+      "sha256": "11a8989cff73a9cc3137e4bb5646af5add3ee50b05fb8dbfe2210ff5e004fefc",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_wrong_source/phases/01-research/v2/synthesis-v2.md",
+      "size": 27,
+      "sha256": "4b8a062e44632d994c3de4f3c55d01ac320e9cdbf5d9c357993a3dfccb48d751",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_wrong_source/phases/02-research-review/v1/r1/opus-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_wrong_source/phases/02-research-review/v1/r1/opus-2-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_wrong_source/phases/02-research-review/v1/r1/sol-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_wrong_source/phases/02-research-review/v1/r1/sol-2-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_wrong_source/phases/02-research-review/v1/synthesis-v1.md",
+      "size": 34,
+      "sha256": "9daa2497e0afad4999f81b82dd904a96cf4392cb2c0e94c032c3d3cece50190c",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_wrong_source/phases/03-scope/v1/synthesis-v1.md",
+      "size": 24,
+      "sha256": "3d54a44646ed9e1e7ee3f0095295f8eb94653897afea2f5f576268f5430e02a9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/revise_wrong_source/preflight.md",
+      "size": 19,
+      "sha256": "5044adda56ab54b725c4a89d29a237b6d40228e8df52fa8ac508c7696cb00ff3",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/unrankable_phase/conformance/deterministic-checker.md",
+      "size": 32,
+      "sha256": "d34d11b3fb757a04e3a2b31c19cb112ef02932703ba737c77353ad38705864f5",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/unrankable_phase/conformance/frozen-packet.md",
+      "size": 16,
+      "sha256": "15d61a7d56d58fd65b28085954c1af32dbe6563bcb34d3ceeb97b6ac728525e4",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/unrankable_phase/ledger.sql",
+      "size": 9422,
+      "sha256": "18ee098322d2b214651fd31c1a52912bb9406b86ac9fd597238e00b85423f73a",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/unrankable_phase/model-profile.md",
+      "size": 23,
+      "sha256": "c360fe0880275b0b6f83296e210c7eebdabbf986d5a4bbdf25a9c098cce219f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/unrankable_phase/preflight.md",
+      "size": 19,
+      "sha256": "5044adda56ab54b725c4a89d29a237b6d40228e8df52fa8ac508c7696cb00ff3",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_replaced_slot/conformance/deterministic-checker.md",
+      "size": 32,
+      "sha256": "d34d11b3fb757a04e3a2b31c19cb112ef02932703ba737c77353ad38705864f5",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_replaced_slot/conformance/frozen-packet.md",
+      "size": 16,
+      "sha256": "15d61a7d56d58fd65b28085954c1af32dbe6563bcb34d3ceeb97b6ac728525e4",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_replaced_slot/ledger-snapshots/02-research-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_replaced_slot/ledger.sql",
+      "size": 13753,
+      "sha256": "9c5c493f0533ddeb15e6eab651d886abca810779011a586ebca11c2279aa4e18",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_replaced_slot/model-profile.md",
+      "size": 23,
+      "sha256": "c360fe0880275b0b6f83296e210c7eebdabbf986d5a4bbdf25a9c098cce219f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_replaced_slot/phases/01-research/v1/synthesis-v1.md",
+      "size": 27,
+      "sha256": "11a8989cff73a9cc3137e4bb5646af5add3ee50b05fb8dbfe2210ff5e004fefc",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_replaced_slot/phases/02-research-review/v1/r1/opus-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_replaced_slot/phases/02-research-review/v1/r1/opus-1-a2.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_replaced_slot/phases/02-research-review/v1/r1/opus-2-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_replaced_slot/phases/02-research-review/v1/r1/sol-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_replaced_slot/phases/02-research-review/v1/r1/sol-2-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_replaced_slot/phases/02-research-review/v1/synthesis-v1.md",
+      "size": 34,
+      "sha256": "9daa2497e0afad4999f81b82dd904a96cf4392cb2c0e94c032c3d3cece50190c",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_replaced_slot/preflight.md",
+      "size": 19,
+      "sha256": "5044adda56ab54b725c4a89d29a237b6d40228e8df52fa8ac508c7696cb00ff3",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_state_negatives/conformance/deterministic-checker.md",
+      "size": 32,
+      "sha256": "d34d11b3fb757a04e3a2b31c19cb112ef02932703ba737c77353ad38705864f5",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_state_negatives/conformance/frozen-packet.md",
+      "size": 16,
+      "sha256": "15d61a7d56d58fd65b28085954c1af32dbe6563bcb34d3ceeb97b6ac728525e4",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_state_negatives/ledger-snapshots/02-research-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_state_negatives/ledger.sql",
+      "size": 15137,
+      "sha256": "d2ebdfbc0e2458534ae5ab0b1978ec9a7145d186256710f0dac6df0b7c7d8233",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_state_negatives/model-profile.md",
+      "size": 23,
+      "sha256": "c360fe0880275b0b6f83296e210c7eebdabbf986d5a4bbdf25a9c098cce219f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_state_negatives/phases/01-research/v1/r1/opus-1-a1.md",
+      "size": 521,
+      "sha256": "12d5f162ee950e371621ae81bb268f38febe46ef0d4722d337b46e0182870143",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_state_negatives/phases/01-research/v1/r1/opus-2-a1.md",
+      "size": 521,
+      "sha256": "12d5f162ee950e371621ae81bb268f38febe46ef0d4722d337b46e0182870143",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_state_negatives/phases/01-research/v1/r1/sol-1-a1.md",
+      "size": 521,
+      "sha256": "12d5f162ee950e371621ae81bb268f38febe46ef0d4722d337b46e0182870143",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_state_negatives/phases/01-research/v1/r1/sol-2-a1.md",
+      "size": 521,
+      "sha256": "12d5f162ee950e371621ae81bb268f38febe46ef0d4722d337b46e0182870143",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_state_negatives/phases/01-research/v1/synthesis-v1.md",
+      "size": 27,
+      "sha256": "11a8989cff73a9cc3137e4bb5646af5add3ee50b05fb8dbfe2210ff5e004fefc",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_state_negatives/phases/02-research-review/v1/r1/opus-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_state_negatives/phases/02-research-review/v1/r1/opus-2-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_state_negatives/phases/02-research-review/v1/r1/sol-1-a1.md",
+      "size": 438,
+      "sha256": "648c69f93017b83058394b51a14b2b07fb86c79ab512cc9c9de411da749985c9",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_state_negatives/phases/02-research-review/v1/r1/sol-2-a1.md",
+      "size": 438,
+      "sha256": "fef29a41ffd10e1663d31b20c6af3e1500b9230dfa44f5665bb19ac44749c19e",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_state_negatives/phases/02-research-review/v1/synthesis-v1.md",
+      "size": 34,
+      "sha256": "9daa2497e0afad4999f81b82dd904a96cf4392cb2c0e94c032c3d3cece50190c",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_state_negatives/preflight.md",
+      "size": 19,
+      "sha256": "5044adda56ab54b725c4a89d29a237b6d40228e8df52fa8ac508c7696cb00ff3",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_void_round/conformance/deterministic-checker.md",
+      "size": 32,
+      "sha256": "d34d11b3fb757a04e3a2b31c19cb112ef02932703ba737c77353ad38705864f5",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_void_round/conformance/frozen-packet.md",
+      "size": 16,
+      "sha256": "15d61a7d56d58fd65b28085954c1af32dbe6563bcb34d3ceeb97b6ac728525e4",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_void_round/ledger-snapshots/08-execution-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_void_round/ledger-snapshots/08-execution-review-v2-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_void_round/ledger.sql",
+      "size": 15092,
+      "sha256": "397ca157c6a9c1a9189b3d7ac390b33391f87c878d10acd7503b0cd78ef0772d",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_void_round/model-profile.md",
+      "size": 23,
+      "sha256": "c360fe0880275b0b6f83296e210c7eebdabbf986d5a4bbdf25a9c098cce219f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_void_round/phases/07-execute/v1/synthesis-v1.md",
+      "size": 26,
+      "sha256": "e4c962a41dc10d68d1868276aebc0293e126f94db83911c6ea47d7500dadef70",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_void_round/phases/07-execute/v2/synthesis-v2.md",
+      "size": 26,
+      "sha256": "0858e786a08ab21cefb58e5a3af928da90ca1e013c8973d211a37ae56c068e04",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_void_round/phases/08-execution-review/v1/r1/opus-1-a1.md",
+      "size": 437,
+      "sha256": "0928563490d06bf3bcad1977f156435e4ed436b6b1978b828276e2929150754d",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_void_round/phases/08-execution-review/v1/r1/opus-2-a1.md",
+      "size": 437,
+      "sha256": "0928563490d06bf3bcad1977f156435e4ed436b6b1978b828276e2929150754d",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_void_round/phases/08-execution-review/v1/r1/sol-1-a1.md",
+      "size": 437,
+      "sha256": "0928563490d06bf3bcad1977f156435e4ed436b6b1978b828276e2929150754d",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_void_round/phases/08-execution-review/v1/r1/sol-2-a1.md",
+      "size": 437,
+      "sha256": "0928563490d06bf3bcad1977f156435e4ed436b6b1978b828276e2929150754d",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_void_round/phases/08-execution-review/v1/synthesis-v1.md",
+      "size": 35,
+      "sha256": "5c6c701e65571c74e0049e9f3c933122259d7b6870e6e8edf560db399945e376",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_void_round/phases/08-execution-review/v2/r1/opus-1-a1.md",
+      "size": 437,
+      "sha256": "d2b5ad15735ae145c1dbeaf63ceab08e5892e30f31bc8e940e7bd17eaf3de995",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_void_round/phases/08-execution-review/v2/r1/opus-2-a1.md",
+      "size": 437,
+      "sha256": "d2b5ad15735ae145c1dbeaf63ceab08e5892e30f31bc8e940e7bd17eaf3de995",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_void_round/phases/08-execution-review/v2/r1/sol-1-a1.md",
+      "size": 437,
+      "sha256": "d2b5ad15735ae145c1dbeaf63ceab08e5892e30f31bc8e940e7bd17eaf3de995",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_void_round/phases/08-execution-review/v2/r1/sol-2-a1.md",
+      "size": 437,
+      "sha256": "d2b5ad15735ae145c1dbeaf63ceab08e5892e30f31bc8e940e7bd17eaf3de995",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_void_round/phases/08-execution-review/v2/synthesis-v2.md",
+      "size": 35,
+      "sha256": "84203467b834abc1e2b110f837e34ac246e041a837823c9eec1270483be9a52f",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/verdict_void_round/preflight.md",
+      "size": 19,
+      "sha256": "5044adda56ab54b725c4a89d29a237b6d40228e8df52fa8ac508c7696cb00ff3",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/wrong_review_pair/conformance/deterministic-checker.md",
+      "size": 32,
+      "sha256": "d34d11b3fb757a04e3a2b31c19cb112ef02932703ba737c77353ad38705864f5",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/wrong_review_pair/conformance/frozen-packet.md",
+      "size": 16,
+      "sha256": "15d61a7d56d58fd65b28085954c1af32dbe6563bcb34d3ceeb97b6ac728525e4",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/wrong_review_pair/ledger-snapshots/08-execution-review-v1-r1.json",
+      "size": 31,
+      "sha256": "63d544fb1c66b0c790fd7a3f34a7ae3d2c062c3c48400a9a0646f462b5abf0f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/wrong_review_pair/ledger.sql",
+      "size": 12167,
+      "sha256": "9388ce9f5bf7c67066718668262b287d05ce0faec3aecef8ecd6b4aed05a5a13",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/wrong_review_pair/model-profile.md",
+      "size": 23,
+      "sha256": "c360fe0880275b0b6f83296e210c7eebdabbf986d5a4bbdf25a9c098cce219f6",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/wrong_review_pair/phases/05-design-record/v1/synthesis-v1.md",
+      "size": 32,
+      "sha256": "598d654504c497eaf9e31a789106f4cb1bdb38bd067c841ff8baed64f54d3630",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/wrong_review_pair/phases/08-execution-review/v1/r1/opus-1-a1.md",
+      "size": 443,
+      "sha256": "29bc7de8e83cd4932ec48b232dd9698db011379b2c315e86bade381524ab1e15",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/wrong_review_pair/phases/08-execution-review/v1/r1/opus-2-a1.md",
+      "size": 443,
+      "sha256": "29bc7de8e83cd4932ec48b232dd9698db011379b2c315e86bade381524ab1e15",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/wrong_review_pair/phases/08-execution-review/v1/r1/sol-1-a1.md",
+      "size": 443,
+      "sha256": "29bc7de8e83cd4932ec48b232dd9698db011379b2c315e86bade381524ab1e15",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/wrong_review_pair/phases/08-execution-review/v1/r1/sol-2-a1.md",
+      "size": 443,
+      "sha256": "29bc7de8e83cd4932ec48b232dd9698db011379b2c315e86bade381524ab1e15",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/wrong_review_pair/phases/08-execution-review/v1/synthesis-v1.md",
+      "size": 35,
+      "sha256": "5c6c701e65571c74e0049e9f3c933122259d7b6870e6e8edf560db399945e376",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/fixtures/ledger/wrong_review_pair/preflight.md",
+      "size": 19,
+      "sha256": "5044adda56ab54b725c4a89d29a237b6d40228e8df52fa8ac508c7696cb00ff3",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/smoke_installer.ps1",
+      "size": 43691,
+      "sha256": "a337d6e68ec56b039ae0db84099acdf54b4f6960f6b97896da85dd6e4884c0a7",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/smoke_installer.sh",
+      "size": 32853,
+      "sha256": "14ee8b263f79e6702a082805eb41e24803b4e7b752bfbb97ed1114167b9e62b2",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/test_advisory_result.py",
+      "size": 6500,
+      "sha256": "7823f25741e944d53332306493864db570b7fff0e61ce53829f57616424247ca",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/test_ledger_checker.py",
+      "size": 17949,
+      "sha256": "49f5096ca0e6b94c2fe45f1ac9605b607550b17be7ce52444f8f1b023f7d1353",
+      "disposition": "assigned"
+    },
+    {
+      "path": "tests/verify_package.py",
+      "size": 24181,
+      "sha256": "8314ab90c2d5d24e9012e29cb3f7a8a89a9a73566b61a0ead552cbfb3fe665ea",
+      "disposition": "assigned"
+    }
+  ]
+}

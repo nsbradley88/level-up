@@ -2,8 +2,6 @@
 name: level-up
 description: Orchestrate an ephemeral, evidence-driven review of an idea or codebase through discovery, independent validation, refinement, adversarial review, and convergence. Use when an operator wants multiple subagents to recursively improve an idea or produce a PR-ready change specification without modifying the evaluated environment.
 license: MIT
-user-invocable: true
-disable-model-invocation: true
 ---
 
 # Level Up
@@ -15,27 +13,6 @@ This is not an implementation framework. During Phases 1–6, do not install
 dependencies, start services, provision infrastructure, execute project code,
 or write inside the subject. Only an approved, safe-path-confirmed Phase 7
 export may write there.
-
-## Invocation
-
-Level Up is operator-invoked only. It begins when the operator explicitly asks
-for it, by `/level-up` or by naming Level Up in their own words. The frontmatter
-sets `disable-model-invocation: true`, but that flag is host-enforced and not
-every host honors it, so the constraint is also normative here.
-
-- Never begin a review on your own initiative, and never propose one and then
-  start it in the same turn.
-- A subject that merely resembles Level Up's shape is not an invocation.
-  Neither is a prior Level Up run in the same session, nor an operator
-  instruction to be thorough, review carefully, or check the work.
-- Where a subject appears to warrant Level Up, state that in one sentence and
-  let the operator decide. Continue the ordinary requested work meanwhile;
-  never stall pending the suggestion.
-- A subagent, hook, scheduled job, or another skill cannot invoke Level Up on
-  the operator's behalf. Only an operator starts a run.
-
-A run launches many subagents across seven phases. Starting one uninvited
-spends operator budget on a decision the operator did not make.
 
 ## Operating principles
 

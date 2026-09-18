@@ -15,9 +15,10 @@ uncertainty.
 `SKILL.md` is the normative specification. This README is a descriptive guide
 and defers to it.
 
-The skill is deliberately portable and non-intrusive:
+The core skill is deliberately portable and non-intrusive:
 
 - one self-contained `SKILL.md`;
+- an optional tool-less conformance profile and reference result validator;
 - no runtime dependencies, services, or infrastructure;
 - no implementation or experimentation phase;
 - no subject writes during Phases 1–6; and
@@ -130,10 +131,13 @@ status, materiality, classification, distinctness, and objective effects from
 every Phase 5 ledger row without seeing sealed determinations. Those
 determinations are then revealed and reconciled.
 
-The main agent drafts the convergence decision, and one separate checker reviews
-it against the frozen candidate record and convergence conditions without
-reopening subject research. The validation results, final decision, and
-conformance record are written together into `phase6.md`.
+The main agent drafts the convergence decision, and one fresh separate checker
+reviews it against a digest-bound frozen packet without reopening subject
+research. When available, Level Up prefers the canonical static tool-less
+profile; otherwise it provisions the identical role dynamically. Both paths use
+the same exact JSON contract, full literal IDs, explicit `NOT_CHECKABLE`
+properties, and structural validation. The checker remains advisory and adds no
+evidentiary weight.
 
 Quorum is evidence-based rather than a simple agent vote. Convergence requires:
 
@@ -240,6 +244,24 @@ If installing or changing the skill during a running Copilot CLI session, use
 inspect the loaded skill and its location; `/skills list` lists available
 skills. From a terminal, `copilot skill list` provides the corresponding list.
 See [Adding agent skills for GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills).
+
+### Optional static conformance checker
+
+The Phase 6 checker remains portable because Level Up can provision it
+dynamically. To use the lower-context static profile with GitHub Copilot CLI,
+also install:
+
+```bash
+mkdir -p ~/.copilot/agents
+curl -fsSL \
+  https://raw.githubusercontent.com/nsbradley88/level-up/main/agents/level-up-conformance-checker.agent.md \
+  -o ~/.copilot/agents/level-up-conformance-checker.agent.md
+```
+
+Repository-local agent hosts may instead place the same file at
+`.github/agents/level-up-conformance-checker.agent.md`. Agent registration is a
+host operation, not a requirement of `SKILL.md`; record availability and use the
+dynamic fallback when it cannot be resolved.
 
 Keep four checks distinct:
 
@@ -402,8 +424,14 @@ not an exhaustive checklist.
 
 ```text
 .
+├── agents/
+│   └── level-up-conformance-checker.agent.md
 ├── assets/
 │   └── level-up.png
+├── tests/
+│   └── test_check_conformance_result.py
+├── tools/
+│   └── check_conformance_result.py
 ├── LICENSE
 ├── README.md
 └── SKILL.md
@@ -411,9 +439,12 @@ not an exhaustive checklist.
 
 | Path | Purpose |
 | --- | --- |
+| `agents/level-up-conformance-checker.agent.md` | Canonical optional tool-less Phase 6 checker profile |
 | `assets/level-up.png` | Banner artwork displayed by the README |
 | `LICENSE` | MIT license covering the repository contents |
 | `SKILL.md` | Normative, self-contained instructions loaded by compatible agents |
+| `tests/test_check_conformance_result.py` | Regression coverage derived from the controlled extraction packet |
+| `tools/check_conformance_result.py` | Reference structural validator for checker JSON |
 | `README.md` | Descriptive human-facing overview, installation, usage, and design notes |
 
 ### Maintainer checks (optional)
@@ -424,6 +455,7 @@ These checks require no CI service or runtime dependency:
 - require the completion marker only as the final line of completed artifacts;
 - keep the `SKILL.md` body at or below 500 lines and 5,000 estimated
   `cl100k_base` tokens, reporting both and never using a byte threshold;
+- run `python -B tests/test_check_conformance_result.py`;
 - keep the resolved-invariant inventory intact: objective typing; documentation
   never resolving defects; candidate-ledger sealing; bounded checker fallback;
   containment, hexadecimal run IDs, fail-if-exists creation, and one alternate
@@ -431,7 +463,8 @@ These checks require no CI service or runtime dependency:
   deletion; neutral packets, role separation, and ID aliases; coverage manifest
   with a per-path disposition and byte-based partitioning; provenance citations
   for duplicated artifacts; a named partition axis per iteration; and
-  `license: MIT`;
+  `license: MIT`; static-checker fallback without verdict shopping; full literal
+  checker IDs; and explicit advisory/`NOT_CHECKABLE` boundaries;
 - verify public install content and tracked-license parity; and
 - behaviorally exercise a real run after loading and format checks.
 

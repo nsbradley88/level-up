@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "contract_version": "level-up-conformance-v1",
+  "packet_sha256": "810516e19beeb0a918fbf1cb9f31191b0fd21697bf20c799f7dd85911c6a625a",
+  "adjudication_ids": [
+    "iteration-001-draft"
+  ],
+  "condition_ids": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6"
+  ],
+  "candidate_ids": [
+    "i001-p5-adversary-opus-002",
+    "i001-p5-adversary-opus-004",
+    "i001-p5-adversary-opus-006",
+    "i001-p5-adversary-opus-010",
+    "i001-p5-adversary-opus-012",
+    "i001-p5-adversary-opus-014",
+    "i001-p5-adversary-opus-015",
+    "i001-p5-adversary-opus-018",
+    "i001-p5-adversary-opus-020",
+    "i001-p5-adversary-sol-001",
+    "i001-p5-adversary-sol-004",
+    "i001-p5-adversary-sol-005",
+    "i001-p5-adversary-sol-006",
+    "i001-p5-adversary-sol-007",
+    "i001-p5-adversary-sol-009",
+    "i001-p5-adversary-sol-010",
+    "i001-p5-adversary-sol-011",
+    "i001-p5-adversary-sol-012",
+    "i001-p5-adversary-sol-014",
+    "i001-p5-adversary-sol-016",
+    "i001-p5-adversary-sol-017",
+    "i001-p6-validate-c-001"
+  ],
+  "required_not_checkable": [
+    "candidate_immutability_without_digest",
+    "cohort_freshness_and_independence",
+    "evidence_truth",
+    "finding_completeness",
+    "model_slot_and_cohort_identity_truth",
+    "review_adequacy",
+    "synthesis_fidelity"
+  ]
+}
